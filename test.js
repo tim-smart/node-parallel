@@ -25,6 +25,7 @@ task.run(function (task_name, err, data) {
   }
 });
 
+// Also accepts an array
 var seq = new parallel.Sequence(
   function (next) {
     sys.puts('sequence-1');

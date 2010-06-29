@@ -87,12 +87,12 @@ Also some usage of `Sequence`:
         // The extra args gets suffixed onto the arguments
         sys.puts('The size of this example is: ' + buffer.length);
 
-        // next.parallel() is a function you need to call
-        // to return a callback that enables you to do
-        // multiple tasks at once. It should only be used in cases
-        // where the expected arguments are: error, result
-        fs.readdir(__dirname, next.parallel());
-        fs.readdir(path.join(__dirname, 'lib'), next.parallel());
+        // next.parallel is a variable you can pass which
+        // enables you to do  multiple tasks at once.
+        // It should only be used in cases where the expected
+        // arguments passed to the callback are: error, result
+        fs.readdir(__dirname, next.parallel);
+        fs.readdir(path.join(__dirname, 'lib'), next.parallel);
       }
     ]);
 

@@ -33,9 +33,9 @@ var seq = new parallel.Sequence(
   },
   function (next, text) {
     sys.puts(text);
-    process.nextTick(next.parallel());
-    process.nextTick(next.parallel());
-    process.nextTick(next.parallel());
+    process.nextTick(next.parallel);
+    process.nextTick(next.parallel);
+    process.nextTick(next.parallel);
   },
   function (next, err, results) {
     sys.puts('sequence-3');

@@ -8,7 +8,5 @@
     "url": "http://github.com/Tim-Smart/node-parallel.git"
   },
   "engine": [ "node >=0.1.90" ],
-  "directories": {
-    "lib": "./lib/parallel"
-  }
+  "main": "lib/parallel"
 }

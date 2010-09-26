@@ -1,7 +1,7 @@
 {
   "name": "parallel",
   "description": "Create tasks in node.js that run in parallel, or sequences that run tasks one after another.",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "author": "Tim Smart",
   "repository": {
     "type": "git",

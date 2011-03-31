@@ -3,7 +3,10 @@ var fs = require('fs');
 var sys = require('sys');
 
 var task = new parallel.Task({
-  1: [fs.readFile, __filename],
+  1: {
+    action: [fs.readFile, __filename],
+    context: fs
+  },
   'tick': [process.nextTick]
 });
 
@@ -12,6 +15,8 @@ task.add('dir', [fs.readdir, __dirname]);
 task.bind(1, function (err, buffer) {
   sys.puts('parallel-1: ' + buffer.length);
 });
+
+console.log(task);
 
 task.run(function (task_name, err, data) {
   if (task_name === null) {
